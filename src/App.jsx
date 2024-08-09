@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
+import CodeEditor from './components/CodeEditor';
+import CustomInputTabs from './components/CustomInputTabs';
+// import CustomInputEditor from './components/CustomInputEditor';
+// import OutputArea from './components/OutputArea';
 
 function App() {
-  const [count, setCount] = useState(0)
+//   const [inputs, setInputs] = useState([{ id: 1, value: '' }]);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+//   const addInputTab = () => {
+//     if (inputs.length < 5) {
+//       setInputs([...inputs, { id: inputs.length + 1, value: '' }]);
+//     }
+//   };
+
+//   const removeInputTab = (id) => {
+//     setInputs(inputs.filter(input => input.id !== id));
+//   };
+
+//   const updateInput = (id, value) => {
+//     setInputs(inputs.map(input => (input.id === id ? { ...input, value } : input)));
+//   };
+
+//   return (
+//     <div className="playground-container">
+//       <div className="top-section">
+//         <CodeEditor />
+//         <div className="right-section">
+//           <CustomInputTabs inputs={inputs} addInputTab={addInputTab} removeInputTab={removeInputTab} />
+//           <CustomInputEditor inputs={inputs} updateInput={updateInput} />
+//         </div>
+//       </div>
+//       <div className="bottom-section">
+//         <OutputArea />
+//       </div>
+//     </div>
+//   );
+  return(
+    <h1>Helo</h1>
   )
 }
 
-export default App
+export default App;

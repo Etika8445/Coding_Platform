@@ -1,0 +1,7 @@
+.tabs-container {
+    display: flex;
+    align-items: center;
+    background-color: #2d2d2d;
+    padding: 10px;
+}
+  
