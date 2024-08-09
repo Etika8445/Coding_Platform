@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CustomInputTabs.css';
 import { Tabs, Tab, IconButton } from '@mui/material';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const CustomInputTabs = ({ inputs, addInputTab, removeInputTab }) => {
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  const handleTabChange = (event, newValue) => {
+    setSelectedTab(newValue);
+  };
+
   return (
     <div className="tabs-container">
-      <Tabs value={0} variant="scrollable" scrollButtons="auto">
+      <Tabs
+        value={selectedTab}
+        onChange={handleTabChange}
+        variant="scrollable"
+        scrollButtons="auto"
+      >
         {inputs.map((input, index) => (
           <Tab key={input.id} label={`Input ${index + 1}`} />
         ))}
